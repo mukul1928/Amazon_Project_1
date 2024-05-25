@@ -13,7 +13,8 @@ import org.openqa.selenium.support.ui.Select;
 
 public class Amazon_Search_Products_Page 
 {
-ChromeDriver driver;
+WebDriver driver;
+
 @FindBy(xpath="(//span[@class='a-list-item'])[2]")
 WebElement chosingcategory;
 
@@ -91,7 +92,7 @@ public void deteleitemsfromcart()
 }
 
 
-public Amazon_Search_Products_Page(ChromeDriver driver)
+public Amazon_Search_Products_Page(WebDriver driver)
 {
 	this.driver=driver;
 	PageFactory.initElements(driver,this);

@@ -1,5 +1,6 @@
 package z_amazon_source_project_1;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
@@ -7,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Amazon_SignUp_Page 
 {
-ChromeDriver driver;
+WebDriver driver;
 
 @FindBy(id="ap_customer_name")
 WebElement enteryourname;
@@ -40,7 +41,7 @@ public void clicktosignup()
 	verifyyourmobileno.click();
 }
 
-public Amazon_SignUp_Page(ChromeDriver driver)
+public Amazon_SignUp_Page(WebDriver driver)
 {
 	PageFactory.initElements(driver,this);
 }

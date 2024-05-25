@@ -1,5 +1,6 @@
 package z_amazon_source_project_1;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
@@ -7,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Amazon_Manage_Profile_Page 
 {
-	ChromeDriver driver;
+	WebDriver driver;
 	@FindBy(linkText="View")
 	WebElement clicktoview;
 	
@@ -63,7 +64,7 @@ public class Amazon_Manage_Profile_Page
 	{
 		age.click();
 	}
-	public Amazon_Manage_Profile_Page(ChromeDriver driver)
+	public Amazon_Manage_Profile_Page(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
 	}

@@ -1,5 +1,6 @@
 package z_amazon_source_project_1;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -8,7 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Amazon_Checkout_Payment_Page 
 {
-	ChromeDriver driver;
+	WebDriver driver;
+	
 	@FindBy(id="sc-buy-box-ptc-button")
 	WebElement clicktobuy;
 	
@@ -155,7 +157,7 @@ public void couponcode()
 	applycouponcode.sendKeys("AJXpp89");
 }
 
-public Amazon_Checkout_Payment_Page(ChromeDriver driver)
+public Amazon_Checkout_Payment_Page(WebDriver driver)
 {
 	this.driver=driver;
 	PageFactory.initElements(driver, this);
